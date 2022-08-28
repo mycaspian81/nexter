@@ -13,6 +13,15 @@ html{
 
 body{
     box-sizing: border-box;
+    font-weight: 300;
     font-size: 1.6;
+    font-family: $font-primary;
     line-height: 1.6;
+    color: $color-grey-dark-2;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 80vh min-content 40vh repeat(3, min-content);
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(min-content, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(min-content, 1fr) [full-end];
 }
