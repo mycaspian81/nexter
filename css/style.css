@@ -23,7 +23,7 @@ body {
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 80vh repeat(3, min-content);
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(min-content, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(min-content, 1fr) [full-end]; }
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(5rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(5rem, 1fr) [full-end]; }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
@@ -114,8 +114,66 @@ p {
   grid-column: full-start / full-end; }
 
 .homes {
-  background-color: #c69963;
-  grid-column: center-start / center-end; }
+  grid-column: center-start / center-end;
+  margin: 15rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 7rem; }
+
+.home {
+  background-color: #f9f7f6;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .home__img-box {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .home__img {
+    width: 100%; }
+  .home__name-box {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+  .home__name {
+    font-size: 1.5rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    background-color: #101d2c;
+    text-align: center;
+    text-transform: capitalize;
+    color: #fff;
+    padding: 1.3rem 4rem;
+    transform: translateY(-50%);
+    width: 80%; }
+  .home__like {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: #c69963;
+    position: absolute;
+    top: 1rem;
+    right: 1rem; }
+  .home__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+    padding: 1rem 1rem 3rem 3rem;
+    grid-column: 1 / -1; }
+  .home__location, .home__rooms, .home__area, .home__price {
+    display: flex;
+    gap: 1rem;
+    justify-content: start;
+    align-items: center; }
+  .home__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: #c69963; }
+  .home__btn {
+    grid-column: 1 / -1;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    width: 100%; }
 
 .realtors {
   background-color: #101d2c;
