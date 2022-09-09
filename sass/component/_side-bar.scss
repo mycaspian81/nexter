@@ -3,4 +3,34 @@
 
     grid-column: sidebar-start / sidebar-end;
     grid-row: 1 / -1;
+
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+
+    &__content {
+        height: 2px;
+        width: 4.5rem;
+        background-color: #fff;
+        display: flex;
+        position: relative;
+
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 4.5rem;
+            background-color: #fff;
+        }
+
+        &::before {
+            top: 1.5rem;
+        }
+
+        &::after {
+            top: -1.5rem;
+        }
+    }
 }

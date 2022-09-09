@@ -32,6 +32,8 @@
     @extend %heading;
 
     font-size: 1.9rem;
+    text-transform: capitalize;
+    line-height: 1.2;
 
     &--dark { color: $color-grey-dark-1; }
 

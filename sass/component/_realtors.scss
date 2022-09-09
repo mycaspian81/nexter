@@ -1,5 +1,36 @@
 .realtors {
     background-color: $color-secondary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 
     grid-column: col-start 7 / full-end;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        gap: 3vh;
+    }
+
+    &__photo {
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+    }
+
+    &__name {}
+
+    &__sold {
+        font-size: 1rem;
+        color: $color-grey-light-2;
+        text-transform: uppercase;
+    }
 }
