@@ -105,8 +105,38 @@ p {
     font-size: 1.7rem; }
 
 .footer {
+  grid-column: full-start / full-end;
   background-color: #101d2c;
-  grid-column: full-start / full-end; }
+  padding: 8rem; }
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2rem;
+  justify-items: center; }
+  .nav__item {
+    list-style: none;
+    align-self: center;
+    text-align: center;
+    transition: all .2s; }
+    .nav__item:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+      transform: translateY(-0.3rem); }
+  .nav__link:link, .nav__link:visited {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 1.5rem;
+    display: block; }
+
+.copyright {
+  text-align: center;
+  padding: 6rem 17rem 0 17rem;
+  font-size: 1.4rem;
+  color: #aaa; }
 
 .header {
   background-color: #aaa;
@@ -240,7 +270,7 @@ p {
   .realtors__content {
     display: flex;
     flex-direction: column;
-    gap: 3.5rem; }
+    gap: 4.5vh; }
   .realtors__box {
     display: flex;
     align-items: center;
