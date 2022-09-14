@@ -5,6 +5,9 @@
 
 .heading-1 {
     @extend %heading;
+
+    color: #fff;
+    font-size: 4.5rem;
 }
 
 .heading-2 {

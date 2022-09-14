@@ -29,6 +29,10 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400; }
 
+.heading-1 {
+  color: #fff;
+  font-size: 4.5rem; }
+
 .heading-2 {
   font-size: 4rem;
   line-height: 1;
@@ -139,8 +143,62 @@ p {
   color: #aaa; }
 
 .header {
-  background-color: #aaa;
-  grid-column: full-start / col-end 6; }
+  grid-column: full-start / col-end 6;
+  background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../../img/hero.jpeg);
+  background-size: cover;
+  background-position: center;
+  padding: 8rem;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13vh; }
+  .header__logo {
+    max-height: 2.2rem;
+    max-width: 100%; }
+  .header__box-logo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center; }
+  .header__logos {
+    align-self: stretch;
+    transform: translateY(-2rem);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; }
+  .header__main-logo {
+    max-height: 3rem;
+    align-self: center; }
+  .header__sub {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    align-items: flex-start;
+    width: 100%; }
+  .header .btn--header {
+    margin-top: 1.4rem; }
+  .header__seen {
+    color: #aaa;
+    font-size: 1.6rem;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-gap: 2rem;
+    align-items: center;
+    justify-items: stretch;
+    font-size: 1.6rem; }
+    .header__seen::after {
+      content: "";
+      display: block;
+      height: .1rem;
+      background-color: #aaa; }
+    .header__seen::before {
+      content: "";
+      display: block;
+      height: .1rem;
+      background-color: #aaa; }
+  .header__logos {
+    filter: brightness(75%); }
 
 .gallery {
   grid-column: full-start / full-end;
