@@ -56,6 +56,6 @@ body {
     }
 
     @include respond(fourth) {
-        grid-template-rows: 6vh 53vh repeat(7, min-content);
+        grid-template-rows: 6vh 65vh repeat(7, min-content);
     }
 }
