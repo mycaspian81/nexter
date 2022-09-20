@@ -4,6 +4,15 @@
     grid-gap: 6rem;
     align-items: start;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+
+    @include respond(third) {
+        margin: 0;
+        padding: 8rem 0;
+    }
+
+    @include respond(fifth) {
+        gap: 8rem;
+    }
 }
 
 .feature {

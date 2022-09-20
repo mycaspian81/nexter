@@ -33,4 +33,12 @@
             top: -1.5rem;
         }
     }
+
+    @include respond(second) {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        justify-content: end;
+        align-items: center;
+        padding: 2rem;
+    }
 }

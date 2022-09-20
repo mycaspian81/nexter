@@ -40,5 +40,13 @@
     text-align: center;
     padding: 6rem 17rem 0 17rem;
     font-size: 1.4rem;
-    color: #aaa;    
+    color: #aaa;
+    
+    @include respond(third) {
+        padding: 6rem 10rem 0 10rem;
+    }
+
+    @include respond(third) {
+        padding: 6rem 0 0;
+    }
 }

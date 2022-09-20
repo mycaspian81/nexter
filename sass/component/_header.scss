@@ -4,12 +4,15 @@
     background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../../img/hero.jpeg);
     background-size: cover;
     background-position: center;
-    padding: 8rem;
-    padding-top: 4rem;
+    padding: 4rem 8rem 4rem 8rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 13vh;
+    justify-content: space-between;
+
+    @include respond(third) {
+        grid-column: full-start / full-end;
+    }
 
     &__logo {
         max-height: 2.2rem;

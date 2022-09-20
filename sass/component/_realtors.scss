@@ -8,10 +8,29 @@
 
     grid-column: col-start 7 / full-end;
 
+    @include respond(third) {
+        grid-column: full-start / full-end;
+        padding: 3rem;
+    }
+
+    @include respond(fourth) {
+        padding: 5rem;
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
         gap: 4.5vh;
+
+        @include respond(third) {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 5vw;
+        }
+
+        @include respond(fourth) {
+            flex-direction: column;
+        }
     }
 
     &__box {

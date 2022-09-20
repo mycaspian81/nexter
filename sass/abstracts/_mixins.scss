@@ -1,0 +1,21 @@
+@mixin respond($break) {
+    @if $break == first {
+        @media only screen and (max-width: 73.43em) {@content};
+    }
+
+    @if $break == second {
+        @media only screen and (max-width: 61.87em) {@content};
+    }
+
+    @if $break == third {
+        @media only screen and (max-width: 54.12em) {@content};
+    }
+
+    @if $break == fourth {
+        @media only screen and (max-width: 35em) {@content};
+    }
+
+    @if $break == fifth {
+        @media only screen and (max-width: 25em) {@content};
+    }
+}

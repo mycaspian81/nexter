@@ -1,9 +1,9 @@
 *,
 *::after,
-*::before{
-    padding:0;
-    margin:0;
-    box-sizing:inherit;
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
 }
 
 *::selection {
@@ -12,11 +12,27 @@
 }
 
 
-html{
+html {
     font-size: 62.5%; // 10px === 1rem
+
+    @include respond(first) { // 8.5 px
+        font-size: 53.12%;
+    }
+
+    @include respond(second) { // 8 px
+        font-size: 50%;
+    }
+
+    @include respond(third) { // 7 px
+        font-size: 43.75%;
+    }
+
+    @include respond(fourth) {
+        // font-size: 37%;
+    }
 }
 
-body{
+body {
     box-sizing: border-box;
     font-weight: 300;
     font-size: 1.6;
@@ -29,4 +45,17 @@ body{
     display: grid;
     grid-template-rows: 80vh min-content 80vh repeat(3, min-content);
     grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(5rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(5rem, 1fr) [full-end];
+
+    @include respond(second) {
+        grid-template-rows: 6.5rem 80vh min-content 80vh repeat(3, min-content);
+        grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(5rem, 1fr) [full-end];
+    }
+
+    @include respond(third) {
+        grid-template-rows: 6.5rem 92vh 20vh repeat(6, min-content);
+    }
+
+    @include respond(fourth) {
+        grid-template-rows: 6vh 53vh repeat(7, min-content);
+    }
 }

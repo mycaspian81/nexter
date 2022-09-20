@@ -9,6 +9,10 @@
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(6, 1fr);
         align-items: center;
+
+        @include respond(third) {
+            grid-column: full-start / full-end;
+        }
     }
 
     &__img--1 {
@@ -16,6 +20,11 @@
 
         grid-column: 2 / 6;
         grid-row: 2 / 6;
+
+        @include respond(third) {
+            width: 90%;
+            transform: translateX(-7rem);
+        }
     }
 
     &__img--2 {
@@ -25,6 +34,14 @@
         grid-row: 4 / 6;
         align-self: start;
         z-index: 20;
+
+        @include respond(third) {
+            width: 90%;
+            grid-column: 4 / 7;
+            grid-row: 2 / 6;
+            align-self: center;
+            z-index: 20;
+        }
     }
 
     &__content {
@@ -41,6 +58,11 @@
 
         p {
             font-style: italic;
+        }
+
+        @include respond(third) {
+            grid-column: full-start / full-end;
+            grid-row: 5 / 6;
         }
     }
 }

@@ -4,6 +4,10 @@
 
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     grid-gap: 7rem;
+
+    @include respond(third) {
+        margin: 8rem 0;
+    }
 }
 
 .home {
@@ -11,6 +15,7 @@
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
 
     &__img-box {
         grid-column: 1 / -1;
@@ -55,8 +60,8 @@
     &__info {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 3rem;
-        padding: 1rem 1rem 3rem 3rem;
+        grid-gap: 5rem;
+        padding: 1rem 0 3rem;
 
         grid-column: 1 / -1;
     }
